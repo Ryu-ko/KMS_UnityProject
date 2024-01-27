@@ -1,0 +1,119 @@
+body {
+  background-color: rgb(234, 249, 255);
+  background-attachment: fixed;
+  margin: 0%;
+  background-size: cover;
+}
+
+h1 {
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 2vw;
+}
+
+.mainImage {
+  width: 30%;
+  border-radius: 0%;
+  border: none;
+  box-shadow: none;
+  margin-bottom: 50px;
+}
+
+.menu {
+  position: static;
+  width: 100%;
+}
+
+body img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.menu-main {
+  list-style: none;
+  margin: 0;
+  text-align: center;
+}
+
+.menu-main p {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.menu-main li {
+  display: inline-block;
+  text-align: center;
+  padding-top: 8px;
+  font-size: 14px;  
+  margin: 15px;
+  height: 30px;
+  width: 250px;
+  background: rgb(253, 212, 27);
+  border-radius: 30px;
+}
+.menu-main li:after {
+  font-weight: bold;
+  color: #130f0f;  text-align: center;
+
+}
+.menu-main li:last-child:after {
+  content: none;
+}
+.menu-main a {
+  text-decoration: none;
+  text-align: center;
+
+  font-family: sans-serif;
+  padding: 0%;
+  position: relative;
+
+  display: inline-block;
+  transition: color 0.2s;
+
+}
+.menu-main a,
+.menu-main a:visited {
+  color: #130f0f;
+
+}
+.menu-main a.current,
+.menu-main a:hover {
+  color: #0eb3ef;
+}
+.menu-main a:before,
+.menu-main a:after {
+  background: #02afff;
+  transition: 0.8s;
+}
+
+
+
+
+@media screen and (max-width: 1000px) {
+  .menu-main li {
+    font-size: 4vw;
+  }
+  .menu-main a {
+    font-size: 1.6vw;
+    padding: 10px 0 10px;
+    margin: 0 30px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .menu-main {
+    padding-top: 0;
+  }
+  .menu-main li {
+    font-size: 10px;
+  }
+  .menu-main li:after {
+    content: none;
+  }
+  .menu-main a {
+    font-size: 1.6vw;
+    padding: 10px 0 10px;
+    margin: 0 30px;
+  }
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+
+    <body>
+        <div class="Image">
+            <img id ="Img" src="/1strawCat.jpg" width="100px" height="100px">
+            <br>
+        </div>
+        <div>
+            <p> <span id="chcolor" style="color: greenyellow;" >Lorem</span> ipsum dolor sit amet consectetur adipisicing elit. Debitis, 
+                culpa velit assumenda voluptas quisquam deleniti labore impedit autem praesentium rerum consequatur asperiores.
+                 Illum atque ipsum explicabo architecto, error tenetur eum?
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi minus sint, ipsa quam dolores mollitia deleniti in accusamus voluptatibus. Ipsam assumenda fugit ex recusandae asperiores! Quam impedit itaque rerum laboriosam!
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis deserunt cupiditate, laborum voluptates eos amet corrupti at quia eaque, eum labore similique repudiandae distinctio error, maiores modi accusantium! Sequi, adipisci.
+                
+                </p>
+        </div>
+        
+        <div>
+            <br><br>
+            <p>
+                Lorem ipsum<span id="chForImg" onmouseover="toImage('/1strawCat.jpg')" onmouseout="toText(' CATCATCAT ')">  CATCATCAT  </span>sit amet consectetur adipisicing elit. Ad, nemo. Enim, dicta eius. Facere voluptate nemo cupiditate asperiores, consequatur sapiente quia placeat sequi cumque iure assumenda reiciendis consequuntur ab voluptatum.
+            </p>
+        </div>
+        <br><br>
+        <div>
+            <ul>
+                <li id="CT" onmousedown="SmenaImg('/1strawCat.jpg') "> Злой котик</li>
+                <li id="CT">Добрый котик</li>
+
+            </ul>
+
+        </div>
+    <script>
+        var myImg = document.getElementById("Img");
+        var txt = document.getElementById("chcolor")
+        var chforCAT=document.getElementById("chForImg");
+
+        myImg.addEventListener("mouseover", function(){
+            myImg.style.width="200px";
+            myImg.style.height="200px";
+        });
+        myImg.addEventListener("mouseout", function(){
+            myImg.style.width="100px";
+            myImg.style.height="100px";
+        });
+        txt.addEventListener("mouseover",function(){
+            txt.style.fontSize="20px";
+            txt.style.color="purple";
+        });
+
+        txt.addEventListener("mouseout",function(){
+            txt.style.fontSize="16px";
+            txt.style.color="greenyellow";
+        });
+
+        function toImage(path) {document.getElementById("chForImg").innerHTML= `<img style='width: 50px;' src="${path}" >`;} 
+        function toText(text) {document.getElementById("chForImg").innerHTML=`<span>${text}</span>`}
+
+        function toImage(path) {document.getElementById("chForImg").innerHTML= `<img style='width: 50px;' src="${path}" >`;} 
+
+        function SmenaImg(path){ document.getElementById("CT").innerHTML=`<img style='width: 50px;' src="${path}" >`; }
+
+
+    </script>
+    </body>
+
+</html>
